@@ -1,0 +1,119 @@
+/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container Styles */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Group Styles */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
+  input[type="number"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="date"]:focus,
+  input[type="time"]:focus,
+  input[type="number"]:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #007bff;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  /* Submit Button */
+  button[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Generated Report Styles */
+  .generated-report {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-line;
+  }
+  
+  textarea[readonly] {
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+    padding: 10px;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+    }
+  
+    button[type="submit"] {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    label {
+      font-size: 13px;
+    }
+  
+    input,
+    textarea,
+    select {
+      font-size: 13px;
+      padding: 8px;
+    }
+  }
+  

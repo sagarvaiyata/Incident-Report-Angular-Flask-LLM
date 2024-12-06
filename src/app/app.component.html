@@ -1,0 +1,93 @@
+<div class="container">
+  <h3> Incident Report Helper <br/> <br/>  </h3>
+  <form (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label for="storeName">Store name & number:</label>
+      <input type="text" id="storeName" class="form-control" [(ngModel)]="formData.storeName" name="storeName">
+    </div>
+
+    <div class="form-group">
+      <label for="storeAddress">Store address:</label>
+      <input type="text" id="storeAddress" class="form-control" [(ngModel)]="formData.storeAddress" name="storeAddress">
+    </div>
+
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <input type="date" id="date" class="form-control" [(ngModel)]="formData.date" name="date">
+    </div>
+
+    <div class="form-group">
+      <label for="time">Time:</label>
+      <input type="time" id="time" class="form-control" [(ngModel)]="formData.time" name="time">
+    </div>
+
+    <div class="form-group">
+      <label for="eventType">Event type:</label>
+      <select id="eventType" class="form-control" [(ngModel)]="formData.eventType" name="eventType">
+        <option value="Deterrence">Deterrence</option>
+        <option value="Recovery">Recovery</option>
+        <option value="Theft & Fled away">Theft & Fled away</option>
+        <option value="Arrest">Arrest</option>
+        <option value="Assault">Assault</option>
+        <option value="TPA">TPA</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="sku">SKU #:</label>
+      <input type="text" id="sku" class="form-control" [(ngModel)]="formData.sku" name="sku">
+    </div>
+
+    <div class="form-group">
+      <label for="totalItemValue">Total Item Value (Without Tax):</label>
+      <input type="number" id="totalItemValue" class="form-control" [(ngModel)]="formData.totalItemValue" name="totalItemValue">
+    </div>
+
+    <div class="form-group">
+      <label for="policeFile">Police File (Occurrence number) #:</label>
+      <input type="text" id="policeFile" class="form-control" [(ngModel)]="formData.policeFile" name="policeFile">
+    </div>
+
+    <div class="form-group">
+      <label for="policeOfficer">Police Officer: Name + Badge + Division:</label>
+      <input type="text" id="policeOfficer" class="form-control" [(ngModel)]="formData.policeOfficer" name="policeOfficer">
+    </div>
+
+    <div class="form-group">
+      <label for="subjectIdentity">Subject Identity (Name + Address):</label>
+      <input type="text" id="subjectIdentity" class="form-control" [(ngModel)]="formData.subjectIdentity" name="subjectIdentity">
+    </div>
+
+    <div class="form-group">
+      <label for="dob">DOB:</label>
+      <input type="date" id="dob" class="form-control" [(ngModel)]="formData.dob" name="dob">
+    </div>
+
+    <div class="form-group">
+      <label for="subjectDescription">Subject full description:</label>
+      <input type="text" id="subjectDescription" class="form-control" [(ngModel)]="formData.subjectDescription" name="subjectDescription">
+    </div>
+
+    <div class="form-group">
+      <label for="picturesOfItems">Pictures of items taken:</label>
+      <input type="checkbox" id="picturesOfItems" [(ngModel)]="formData.picturesOfItems" name="picturesOfItems">
+    </div>
+
+    <div class="form-group">
+      <label for="cctvImage">CCTV image of Subject if available:</label>
+      <input type="checkbox" id="cctvImage" [(ngModel)]="formData.cctvImage" name="cctvImage">
+    </div>
+
+    <div class="form-group">
+      <label for="incidentReport">Incident Report:</label>
+      <textarea id="incidentReport" class="form-control" [(ngModel)]="formData.incidentReport" name="incidentReport"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Generate Report</button>
+  </form>
+
+  <div *ngIf="report">
+    <h3>Generated Report</h3>
+    <textarea class="form-control" rows="15" readonly>{{ report }}</textarea>
+  </div>
+</div>
